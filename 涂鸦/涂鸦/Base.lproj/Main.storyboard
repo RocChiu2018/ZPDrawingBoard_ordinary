@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8L7-Gq-ORm">
+                                <rect key="frame" x="56" y="155" width="31" height="30"/>
+                                <state key="normal" title="清屏"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n3D-eo-czf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQH-uN-6V4">
+                                <rect key="frame" x="172" y="155" width="31" height="30"/>
+                                <state key="normal" title="回退"/>
+                                <connections>
+                                    <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="brK-2x-dpc"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sq5-Yz-y98" customClass="ZPDrawView">
+                                <rect key="frame" x="12.5" y="198.5" width="350" height="270"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="1YJ-cR-fHH"/>
+                                    <constraint firstAttribute="width" constant="350" id="lze-8v-GlI"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ger-AU-lhC">
+                                <rect key="frame" x="288" y="155" width="31" height="30"/>
+                                <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hhz-BZ-8XB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.54138268150000002" blue="0.12271445039999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ger-AU-lhC" firstAttribute="top" secondItem="MQH-uN-6V4" secondAttribute="top" id="C5g-ay-Orl"/>
+                            <constraint firstItem="8L7-Gq-ORm" firstAttribute="bottom" secondItem="MQH-uN-6V4" secondAttribute="bottom" id="DL4-Uh-3ki"/>
+                            <constraint firstItem="MQH-uN-6V4" firstAttribute="leading" secondItem="8L7-Gq-ORm" secondAttribute="trailing" constant="85" id="Hgq-Tf-Ukj"/>
+                            <constraint firstItem="Sq5-Yz-y98" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I1C-2A-fKY"/>
+                            <constraint firstItem="Ger-AU-lhC" firstAttribute="leading" secondItem="MQH-uN-6V4" secondAttribute="trailing" constant="85" id="dRu-VK-qPC"/>
+                            <constraint firstItem="Ger-AU-lhC" firstAttribute="bottom" secondItem="MQH-uN-6V4" secondAttribute="bottom" id="dp5-cG-qxY"/>
+                            <constraint firstItem="MQH-uN-6V4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="135" id="eV5-wh-3El"/>
+                            <constraint firstItem="Sq5-Yz-y98" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iGy-bX-m3y"/>
+                            <constraint firstItem="8L7-Gq-ORm" firstAttribute="top" secondItem="MQH-uN-6V4" secondAttribute="top" id="kJy-fH-fLT"/>
+                            <constraint firstItem="MQH-uN-6V4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lZG-0a-sX2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawView" destination="Sq5-Yz-y98" id="uKg-63-rrM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-286" y="-24"/>
+        </scene>
+    </scenes>
+</document>
